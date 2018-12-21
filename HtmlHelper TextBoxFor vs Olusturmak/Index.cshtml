@@ -1,0 +1,12 @@
+﻿@using Aspnet_Mvc_Custom_Helper_olusturmak.Models;
+
+@*Bu cshtml'e HtmlHelper'ı oluşturdugumuz yolu tanıtmalıyız'*@
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+@*Bu sekilde  TextBoxFor( expression)*@
+
+@Html.MyTextBox(m=>m.kitapAdi)

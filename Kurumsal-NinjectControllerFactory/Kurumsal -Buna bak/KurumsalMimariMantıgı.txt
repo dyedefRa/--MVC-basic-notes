@@ -1,0 +1,46 @@
+Entity => Model => Buraya Modelleri Ef ile al . Contexti Dal>Concrete>Ef ye götür.
+---------------------------------------------------------------
+
+Dal => 1)Abstract => IRepository<T>  /../  IStokDal:IRepository<Stok>
+          2)Concrete=>
+              a)Ado.NET
+              b)EF =>Repository<TT>:IRepository<TT> (Bunu repository pattern ile doldur)
+                 /../EFStokDal:Repository<Stok>,IStokDal ************************/../Contexte bu yolda.
+---------------------------------------------------------------
+
+Interfaces =>
+ IGenericService<T> /../
+IStokService:IGenericService<Stok>......
+---------------------------------------------------------------
+
+Bll=> (****)
+StokManager:IStokService
+{
+ public IStokDal stokDal;
+
+ctor(IStokDal _stokDal) -> ********** Buradaki _stokDal önemli Ninjectteki isim.
+{
+stokDal=_stokDal;
+}
+
+//stokDal Kullanarak metodlarý doldur...
+
+}
+---------------------------------------------------------------
+
+UI =>
+Global.asax=>
+NinjectControllerFactory:DefaultControllerFactory =>
+
+
+---------------------------------------------------------------
+_stokDal ONEMLÝ !! (Managerdaki)
+bu isme göre NinjectControllerda yonlendirme yapýyýyorz.
+Resýmde var.
+   
+
+
+
+
+
+                   

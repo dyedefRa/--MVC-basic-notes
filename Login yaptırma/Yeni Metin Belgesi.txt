@@ -1,0 +1,24 @@
+public ActionResult Login()
+{
+    return View();
+}
+[HttpPost]
+public ActionResult Login(UserModel model)
+{
+    if (!ModelState.IsValid)
+    {
+        ViewBag.Message = "Lütfen tüm alanlarý doldurunuz.";
+    }
+    string encryptedPass = Encryption.Base64Encode(model.Password);
+    string publicIP = Request.ServerVariables["REMOTE_ADDR"];
+    bool result = UserRepo.Instance.GetUserLoginInfo(model.Username, encryptedPass, publicIP);
+    if (result)
+    {
+        HttpCookie CookieUsername = new HttpCookie("username", model.Username);
+        CookieUsername.Expires = DateTime.Now.AddDays(1);
+        Response.Cookies.Add(CookieUsername);
+        return RedirectToAction("index", "home");
+    }
+    ViewBag.Message = "Kullanýcý adý/parola geçersizdir";
+    return View();
+}

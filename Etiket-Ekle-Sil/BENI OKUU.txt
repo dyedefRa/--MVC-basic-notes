@@ -1,0 +1,13 @@
+1) Virgül ile ayrılmış olan etiketleri ve ekleyeceği sınıfı alıp;
+
+ -Etiketleri ayırarak etiket sınıfına ekler eger yoksa...
+ -Bunları bır lısteye atar ve listede döner,
+ - her dondugunde haberetiket sınıfı olusturur ve bu sınıf ıcın eger boyle bır kayıt varsa 
+eklemez. ve bunlarıda bır lısteye atar
+ -
+
+
+OLAYI SU
+Etiketın aynısı varsa ekelemz
+haberetıketın aynısı varsa eklemez.
+silme olayı da var aynı anda

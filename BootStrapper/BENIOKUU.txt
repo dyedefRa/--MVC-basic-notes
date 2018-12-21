@@ -1,0 +1,16 @@
+Bootsrapper Repository olayini saglar...
+
+Her olusturudugun tablo için bir Irep ve Bootrapperda bir code..
+
+Ve 
+
+
+ private readonly ISliderRepository _sliderRepository;
+
+arti ctora ekle ...
+
+
+ISliderla takýl
+
+
+CotrllerIcýn.cs de var.

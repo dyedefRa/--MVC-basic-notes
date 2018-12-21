@@ -1,0 +1,45 @@
+ public static string UrlCevir(string kelime)
+        {
+            if (string.IsNullOrEmpty(kelime)) return string.Empty;
+            
+
+            kelime = kelime.Replace(".", "");
+            kelime = kelime.Replace(":", "");
+            kelime = kelime.Replace(";", "");
+            kelime = kelime.Replace(",", "");
+            kelime = kelime.Replace(" ", "-");
+            kelime = kelime.Replace("!", "");
+            kelime = kelime.Replace("(", "");
+            kelime = kelime.Replace(")", "");
+            kelime = kelime.Replace("'", "'");
+            kelime = kelime.Replace("ð", "g");
+            kelime = kelime.Replace("Ð", "G");
+            kelime = kelime.Replace("ý", "i");
+            kelime = kelime.Replace("I", "i");
+            kelime = kelime.Replace("ç", "c");
+            kelime = kelime.Replace("Ç", "C");
+            kelime = kelime.Replace("ö", "o");
+            kelime = kelime.Replace("Ö", "O");
+            kelime = kelime.Replace("ü", "u");
+            kelime = kelime.Replace("Ü", "U");
+            kelime = kelime.Replace("þ", "s");
+            kelime = kelime.Replace("Þ", "S");
+            kelime = kelime.Replace("`", "");
+            kelime = kelime.Replace("=", "");
+            kelime = kelime.Replace("&", "");
+            kelime = kelime.Replace("%", "");
+            kelime = kelime.Replace("#", "");
+            kelime = kelime.Replace("<", "");
+            kelime = kelime.Replace(">", "");
+            kelime = kelime.Replace("*", "");
+            kelime = kelime.Replace("?", "");
+            kelime = kelime.Replace("+", "-");
+            kelime = kelime.Replace("\", "-");
+            kelime = kelime.Replace("»", "-");
+            kelime = kelime.Replace("|", "-");
+            kelime = kelime.Replace("^", "");
+            return kelime;
+
+        }
+
+App_Classes ta bir clas olulþturabýlýrsýn bunun ýcýn
